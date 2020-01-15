@@ -29,7 +29,7 @@ print('Time out after %s ' % args['timeout'])
 while finished == False and execution < args['timeout']:
     try:
         codepipeline_state = codepipeline.get_pipeline_state(
-            name='sitedesigner-dev')
+            name=args['name'])
 
         if 'stageStates' not in codepipeline_state:
             print('Failed! Can\'t find Stages!')
