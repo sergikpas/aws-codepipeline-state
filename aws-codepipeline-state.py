@@ -51,6 +51,7 @@ while finished == False and execution < args['timeout']:
             finished = True
     except:
         print(sys.exc_info()[0], "occured.")
+        failed = True
     execution = int(time.time() - start)
 
     time.sleep(1)
