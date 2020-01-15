@@ -25,7 +25,7 @@ finished = False
 start = time.time()
 execution = 0
 
-print('Time out after %s ' % args['timeout'])
+print('Time out after %s secs' % args['timeout'])
 while finished == False and execution < args['timeout']:
     try:
         codepipeline_state = codepipeline.get_pipeline_state(
