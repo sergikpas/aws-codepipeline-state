@@ -36,8 +36,9 @@ while finished == False and execution < args['timeout']:
 
         failed = False
         progress = None
+        print ('Waiting for CodePipeline finished:')
         for state in codepipeline_state['stageStates']:
-            print('Stage: [%s] - %s' %
+            print('\tStage: [%s] - %s' %
                   (state['stageName'], state['latestExecution']['status']))
             if state['latestExecution']['status'] in ('Succeeded', 'Failed'):
                 if progress == None:
