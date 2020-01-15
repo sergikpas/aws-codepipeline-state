@@ -50,7 +50,7 @@ while finished == False and execution < args['timeout']:
         if progress == False:
             finished = True
     except:
-        print(sys.exc_info()[0], "occured.")
+        print(sys.exc_info(), "occured.")
         failed = True
         finished = True
     execution = int(time.time() - start)
